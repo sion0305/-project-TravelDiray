@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Travel Diary</string>
+    <string name="Google_api_key">AIzaSyChB-fxgKewhc2qV3umlC085x-DiYwclbU</string>
+    <string name="init_lat">37.604094</string>
+    <string name="init_lng">127.042463</string>
+    <string name="t_api_key">HbK4BvjG4moF4d2D74EO7Jswx68CbhkiHPz9JEEVFi42CaRp6%2BvwKFAw7hWFpn4SWnXutx3%2BLdlDOOuUcqyI1w%3D%3D</string>
+    <string name="api_area_url">http://api.visitkorea.or.kr/openapi/service/rest/KorService/areaBasedList?serviceKey=</string>
+    <string name="delete_dialog_title">삭제 확인</string>
+    <string name="camera_dialog_title">카메라 열기</string>
+    <string name="return_dialog_title">사진 삭제</string>
+    <string name="dialog_ok">확인</string>
+    <string name="dialog_cancel">취소</string>
+    <string name="api_location_url">http://api.visitkorea.or.kr/openapi/service/rest/KorService/locationBasedList?serviceKey=</string>
+</resources>

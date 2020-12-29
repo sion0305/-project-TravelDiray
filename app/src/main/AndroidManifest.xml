@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ddwu.mobile.finalproject">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <!--기기에 카메라가 있을 경우에만 palystore 에서 다운받도록 지정-->
+    <uses-feature android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FinalReport"
+        android:usesCleartextTraffic="true">
+
+        <!--외부의 앱이 내 앱의 파일을 접근할 수 있도록 FileProvider 지정-->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="ddwu.mobile.finalproject.photo.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"></meta-data>
+        </provider>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/Google_api_key" />
+
+        <activity android:name="ddwu.mobile.finalproject.ma02_20181022.SplashActivity"
+            android:theme="@style/SplashTheme"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="ddwu.mobile.finalproject.ma02_20181022.MainActivity"></activity>
+        <activity android:name="ddwu.mobile.finalproject.ma02_20181022.RecommendList"></activity>
+        <activity android:name="ddwu.mobile.finalproject.ma02_20181022.RecommendDetail"></activity>
+        <activity android:name="ddwu.mobile.finalproject.ma02_20181022.MyTravel"></activity>
+        <activity android:name="ddwu.mobile.finalproject.ma02_20181022.MyTravelDetail"></activity>
+        <activity android:name="ddwu.mobile.finalproject.ma02_20181022.ListByLocation"></activity>
+
+    </application>
+
+</manifest>

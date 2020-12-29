@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvDetailTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="선택한 장소"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tvDetailDist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="거리" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <Button
+                android:id="@+id/btnDetailMap"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:paddingLeft="50dp"
+                app:backgroundTint="@color/cardview_shadow_end_color"
+                app:icon="@android:drawable/ic_dialog_map"
+                app:iconTint="@color/cardview_dark_background" />
+
+            <Button
+                android:id="@+id/btnDetailShare"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:paddingLeft="50dp"
+                app:backgroundTint="@color/cardview_shadow_end_color"
+                app:icon="?attr/actionModeShareDrawable"
+                app:iconTint="@color/cardview_dark_background" />
+
+            <Button
+                android:id="@+id/btnDetailAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:paddingLeft="50dp"
+                app:backgroundTint="@color/cardview_shadow_end_color"
+                app:icon="@android:drawable/star_big_off"
+                app:iconTint="@color/cardview_dark_background" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+        <TextView
+            android:id="@+id/tvDetailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/ic_launcher_location_foreground"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="주소"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvDetailTel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:drawableLeft="@drawable/ic_launcher_phone_foreground"
+            android:paddingLeft="20dp"
+            android:text="번호"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
